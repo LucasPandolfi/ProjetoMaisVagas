@@ -34,8 +34,9 @@ namespace Senai.MaisVagas.WebApi.Domains
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Data Source=DESKTOP-RH355KD; Initial Catalog=MaisVagas; Integrated Security=True;");
-                //optionsBuilder.UseSqlServer("Data Source=LAPTOP-EK8D9020\\SQLEXPRESS2019; Initial Catalog=MaisVagas; Integrated Security=True;");
+                //optionsBuilder.UseSqlServer("Data Source=LAPTOP-EK8D9020\\SQLEXPRESS2019; Initial Catalog=MaisVagas; user Id=sa; pwd=sa@132;");
                 //optionsBuilder.UseSqlServer("Data Source=DESKTOP-HM9340F\\SQLEXPRESS; Initial Catalog=MaisVagas; Integrated Security=True;");
+                //optionsBuilder.UseSqlServer("Data Source=34.207.176.207\\SQLEXPRESS; Initial Catalog=MaisVagas; user Id=1903935; pwd=1903935;");
             }
         }
 
