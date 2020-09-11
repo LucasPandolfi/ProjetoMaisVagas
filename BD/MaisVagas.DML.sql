@@ -49,8 +49,8 @@ VALUES	('04/09/2020','04/09/2021', '365', 'Thiago', 'O Aluno efetuará atividades
 		('05/09/2020','05/09/2021', '365', 'Kaique', 'O Aluno efetuará atividades tecnicas sobre Front-End e Back-End','Opcional', 4 ,2, 2, 2);
 		select * from Vaga
 
-INSERT INTO Inscricao(IdCandidato, IdVaga)
-VALUES (1, 2);
+INSERT INTO Inscricao(Selecionado, IdCandidato, IdVaga)
+VALUES (1, 1, 2);
 
 INSERT INTO VagasFavoritas(IdVaga)
 VALUES (2);

@@ -115,6 +115,7 @@ GO
 
 CREATE TABLE Inscricao(
 	IdInscricao INT PRIMARY KEY IDENTITY,
+	Selecionado BIT,
 	IdVaga		INT FOREIGN KEY REFERENCES Vaga(IdVaga),
 	IdCandidato	INT FOREIGN KEY REFERENCES Candidato(IdCandidato)
 );
@@ -124,7 +125,7 @@ GO
 CREATE TABLE Administrador (
     IdAdministrador INT PRIMARY KEY IDENTITY,
 	NivelAcesso		VARCHAR(40),
-    IdUsuario INT FOREIGN KEY REFERENCES Usuario(IdUsuario),
+    IdUsuario INT FOREIGN KEY REFERENCES Usuario(IdUsuario)
 );
 
 GO
