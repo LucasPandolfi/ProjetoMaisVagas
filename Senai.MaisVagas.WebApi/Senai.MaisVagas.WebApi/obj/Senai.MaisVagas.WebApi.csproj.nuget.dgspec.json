@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj": {}
+    "C:\\Users\\wnova\\Desktop\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj": {
+    "C:\\Users\\wnova\\Desktop\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\wnova\\Desktop\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj",
         "projectName": "Senai.MaisVagas.WebApi",
-        "projectPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj",
-        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\obj\\",
+        "projectPath": "C:\\Users\\wnova\\Desktop\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj",
+        "packagesPath": "C:\\Users\\wnova\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wnova\\Desktop\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wnova\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -97,6 +98,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -105,7 +116,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
