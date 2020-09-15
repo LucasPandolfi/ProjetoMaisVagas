@@ -19,13 +19,12 @@ namespace Senai.MaisVagas.WebApi.Domains
         public string SoftSkills { get; set; }
         public string HardSkills { get; set; }
         public string QualificacaoProfissional { get; set; }
-        public int NumeroVagaDisponiveis { get; set; }
+        public string NumeroVagaDisponiveis { get; set; }
         public string NivelExperiencia { get; set; }
         public string Jornada { get; set; }
         public string Setor { get; set; }
         public long Salario { get; set; }
         public string Beneficios { get; set; }
-        public bool? Verificacao { get; set; }
         public int? IdTipoContrato { get; set; }
         public int? IdEmpresa { get; set; }
 

@@ -18,7 +18,7 @@ namespace Senai.MaisVagas.WebApi.Domains
         public string Senha { get; set; }
         public string Foto { get; set; }
         public string Telefone { get; set; }
-        public int Cep { get; set; }
+        public string Cep { get; set; }
         public string Estado { get; set; }
         public string Cidade { get; set; }
         public string Bairro { get; set; }

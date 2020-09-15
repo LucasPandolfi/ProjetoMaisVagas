@@ -8,12 +8,13 @@ namespace Senai.MaisVagas.WebApi.Domains
         public Empresa()
         {
             Vaga = new HashSet<Vaga>();
+            Verificacao = false;
         }
 
         public int IdEmpresa { get; set; }
         public string Cnpj { get; set; }
         public string Cnae { get; set; }
-        public int? NumeroEmpregados { get; set; }
+        public string NumeroEmpregados { get; set; }
         public string NomeParaContato { get; set; }
         public bool? Verificacao { get; set; }
         public string ImagemCarimboCnpj { get; set; }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj": {}
+    "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi proj\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj": {
+    "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi proj\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi proj\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj",
         "projectName": "Senai.MaisVagas.WebApi",
-        "projectPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj",
+        "projectPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi proj\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi.csproj",
         "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\obj\\",
+        "outputPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Senai.MaisVagas.WebApi proj\\Senai.MaisVagas.WebApi\\Senai.MaisVagas.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -64,19 +64,19 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.5.1, )"
+              "version": "[5.6.0, )"
             },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
-              "version": "[5.5.1, )"
+              "version": "[5.6.0, )"
             },
             "Swashbuckle.AspNetCore.SwaggerGen": {
               "target": "Package",
-              "version": "[5.5.1, )"
+              "version": "[5.6.0, )"
             },
-            "Swashbuckle.AspNetCore.SwaggerUi": {
+            "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
-              "version": "[5.5.1, )"
+              "version": "[5.6.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",

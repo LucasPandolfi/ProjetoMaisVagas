@@ -8,7 +8,7 @@ namespace Senai.MaisVagas.WebApi.Domains
         public int IdContrato { get; set; }
         public DateTime DataInicio { get; set; }
         public DateTime DataTermino { get; set; }
-        public int? DiasContrato { get; set; }
+        public string DiasContrato { get; set; }
         public string ResponsavelEstagio { get; set; }
         public string DescriçaoEstagio { get; set; }
         public string DescriçãoCancelamento { get; set; }

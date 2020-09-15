@@ -43,11 +43,7 @@ namespace Senai.MaisVagas.WebApi.Contexts
             modelBuilder.Entity<Administrador>(entity =>
             {
                 entity.HasKey(e => e.IdAdministrador)
-                    .HasName("PK__Administ__2B3E34A85552DCC3");
-
-                entity.Property(e => e.NivelAcesso)
-                    .HasMaxLength(40)
-                    .IsUnicode(false);
+                    .HasName("PK__Administ__2B3E34A88E28A2D7");
 
                 entity.HasOne(d => d.IdUsuarioNavigation)
                     .WithMany(p => p.Administrador)
@@ -58,10 +54,10 @@ namespace Senai.MaisVagas.WebApi.Contexts
             modelBuilder.Entity<Candidato>(entity =>
             {
                 entity.HasKey(e => e.IdCandidato)
-                    .HasName("PK__Candidat__D5598905180079EA");
+                    .HasName("PK__Candidat__D5598905EA8CDF0A");
 
                 entity.HasIndex(e => e.Cpf)
-                    .HasName("UQ__Candidat__C1F897310CFDC023")
+                    .HasName("UQ__Candidat__C1F897313A722F18")
                     .IsUnique();
 
                 entity.Property(e => e.Cpf)
@@ -72,11 +68,16 @@ namespace Senai.MaisVagas.WebApi.Contexts
                     .IsFixedLength();
 
                 entity.Property(e => e.Curriculo)
-                    .IsRequired()
                     .HasMaxLength(110)
                     .IsUnicode(false);
 
                 entity.Property(e => e.DataNascimento).HasColumnType("date");
+
+                entity.Property(e => e.Matricula)
+                    .IsRequired()
+                    .HasMaxLength(8)
+                    .IsUnicode(false)
+                    .IsFixedLength();
 
                 entity.HasOne(d => d.IdCursoNavigation)
                     .WithMany(p => p.Candidato)
@@ -92,7 +93,7 @@ namespace Senai.MaisVagas.WebApi.Contexts
             modelBuilder.Entity<Contrato>(entity =>
             {
                 entity.HasKey(e => e.IdContrato)
-                    .HasName("PK__Contrato__8569F05AF029751B");
+                    .HasName("PK__Contrato__8569F05AA6452D4F");
 
                 entity.Property(e => e.DataInicio).HasColumnType("date");
 
@@ -104,6 +105,10 @@ namespace Senai.MaisVagas.WebApi.Contexts
 
                 entity.Property(e => e.DescriçãoCancelamento)
                     .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.DiasContrato)
+                    .HasMaxLength(15)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ResponsavelEstagio)
@@ -134,7 +139,7 @@ namespace Senai.MaisVagas.WebApi.Contexts
             modelBuilder.Entity<Curso>(entity =>
             {
                 entity.HasKey(e => e.IdCurso)
-                    .HasName("PK__Curso__085F27D60EF2779F");
+                    .HasName("PK__Curso__085F27D617A731D8");
 
                 entity.Property(e => e.Nome)
                     .IsRequired()
@@ -155,10 +160,10 @@ namespace Senai.MaisVagas.WebApi.Contexts
             modelBuilder.Entity<Empresa>(entity =>
             {
                 entity.HasKey(e => e.IdEmpresa)
-                    .HasName("PK__Empresa__5EF4033EFD79B45A");
+                    .HasName("PK__Empresa__5EF4033EA681B96B");
 
                 entity.HasIndex(e => e.Cnpj)
-                    .HasName("UQ__Empresa__AA57D6B4F8AB969C")
+                    .HasName("UQ__Empresa__AA57D6B48B589124")
                     .IsUnique();
 
                 entity.Property(e => e.Cnae)
@@ -174,18 +179,21 @@ namespace Senai.MaisVagas.WebApi.Contexts
                     .IsUnicode(false);
 
                 entity.Property(e => e.ImagemCarimboAssinaturaDoResponsavel)
-                    .IsRequired()
                     .HasMaxLength(40)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ImagemCarimboCnpj)
-                    .IsRequired()
                     .HasMaxLength(40)
                     .IsUnicode(false);
 
                 entity.Property(e => e.NomeParaContato)
                     .IsRequired()
                     .HasMaxLength(110)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.NumeroEmpregados)
+                    .IsRequired()
+                    .HasMaxLength(10)
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.IdUsuarioNavigation)
@@ -197,7 +205,7 @@ namespace Senai.MaisVagas.WebApi.Contexts
             modelBuilder.Entity<Inscricao>(entity =>
             {
                 entity.HasKey(e => e.IdInscricao)
-                    .HasName("PK__Inscrica__6209444B72EE2EF3");
+                    .HasName("PK__Inscrica__6209444BD1B807E4");
 
                 entity.HasOne(d => d.IdCandidatoNavigation)
                     .WithMany(p => p.Inscricao)
@@ -213,7 +221,7 @@ namespace Senai.MaisVagas.WebApi.Contexts
             modelBuilder.Entity<Situacao>(entity =>
             {
                 entity.HasKey(e => e.IdSituacao)
-                    .HasName("PK__Situacao__810BCE3AEB25C678");
+                    .HasName("PK__Situacao__810BCE3A39678762");
 
                 entity.Property(e => e.Nome)
                     .HasMaxLength(50)
@@ -223,7 +231,7 @@ namespace Senai.MaisVagas.WebApi.Contexts
             modelBuilder.Entity<TipoContrato>(entity =>
             {
                 entity.HasKey(e => e.IdTipoContrato)
-                    .HasName("PK__TipoCont__F46C49C22DD0A2B5");
+                    .HasName("PK__TipoCont__F46C49C281EF6512");
 
                 entity.Property(e => e.Nome)
                     .HasMaxLength(80)
@@ -233,7 +241,7 @@ namespace Senai.MaisVagas.WebApi.Contexts
             modelBuilder.Entity<TipoUsuario>(entity =>
             {
                 entity.HasKey(e => e.IdTipoUsuario)
-                    .HasName("PK__TipoUsua__CA04062B69B6CEA4");
+                    .HasName("PK__TipoUsua__CA04062B123C813F");
 
                 entity.Property(e => e.Titulo)
                     .HasMaxLength(60)
@@ -243,21 +251,23 @@ namespace Senai.MaisVagas.WebApi.Contexts
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario)
-                    .HasName("PK__Usuario__5B65BF97B3E4546F");
+                    .HasName("PK__Usuario__5B65BF972D7AD4E5");
 
                 entity.HasIndex(e => e.Email)
-                    .HasName("UQ__Usuario__A9D10534CD5D8834")
+                    .HasName("UQ__Usuario__A9D105340D6798FE")
                     .IsUnique();
 
                 entity.Property(e => e.Bairro)
-                    .IsRequired()
                     .HasMaxLength(40)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Cep).HasColumnName("CEP");
+                entity.Property(e => e.Cep)
+                    .HasColumnName("CEP")
+                    .HasMaxLength(11)
+                    .IsUnicode(false)
+                    .IsFixedLength();
 
                 entity.Property(e => e.Cidade)
-                    .IsRequired()
                     .HasMaxLength(40)
                     .IsUnicode(false);
 
@@ -267,12 +277,10 @@ namespace Senai.MaisVagas.WebApi.Contexts
                     .IsUnicode(false);
 
                 entity.Property(e => e.Estado)
-                    .IsRequired()
                     .HasMaxLength(35)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Foto)
-                    .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
@@ -287,7 +295,6 @@ namespace Senai.MaisVagas.WebApi.Contexts
                     .IsUnicode(false);
 
                 entity.Property(e => e.Telefone)
-                    .IsRequired()
                     .HasMaxLength(17)
                     .IsUnicode(false);
 
@@ -300,7 +307,7 @@ namespace Senai.MaisVagas.WebApi.Contexts
             modelBuilder.Entity<Vaga>(entity =>
             {
                 entity.HasKey(e => e.IdVaga)
-                    .HasName("PK__Vaga__A848DC3E0E369609");
+                    .HasName("PK__Vaga__A848DC3E916817AF");
 
                 entity.Property(e => e.Beneficios)
                     .HasMaxLength(100)
@@ -312,7 +319,6 @@ namespace Senai.MaisVagas.WebApi.Contexts
                     .IsUnicode(false);
 
                 entity.Property(e => e.HardSkills)
-                    .IsRequired()
                     .HasMaxLength(60)
                     .IsUnicode(false);
 
@@ -326,7 +332,6 @@ namespace Senai.MaisVagas.WebApi.Contexts
                     .IsUnicode(false);
 
                 entity.Property(e => e.NivelExperiencia)
-                    .IsRequired()
                     .HasMaxLength(80)
                     .IsUnicode(false);
 
@@ -335,8 +340,12 @@ namespace Senai.MaisVagas.WebApi.Contexts
                     .HasMaxLength(110)
                     .IsUnicode(false);
 
-                entity.Property(e => e.QualificacaoProfissional)
+                entity.Property(e => e.NumeroVagaDisponiveis)
                     .IsRequired()
+                    .HasMaxLength(15)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.QualificacaoProfissional)
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
@@ -346,7 +355,6 @@ namespace Senai.MaisVagas.WebApi.Contexts
                     .IsUnicode(false);
 
                 entity.Property(e => e.SoftSkills)
-                    .IsRequired()
                     .HasMaxLength(60)
                     .IsUnicode(false);
 
@@ -364,12 +372,17 @@ namespace Senai.MaisVagas.WebApi.Contexts
             modelBuilder.Entity<VagasFavoritas>(entity =>
             {
                 entity.HasKey(e => e.IdVagasFavoritas)
-                    .HasName("PK__VagasFav__33522DA1EAAA9CBB");
+                    .HasName("PK__VagasFav__33522DA1B3190670");
+
+                entity.HasOne(d => d.IdCandidatoNavigation)
+                    .WithMany(p => p.VagasFavoritas)
+                    .HasForeignKey(d => d.IdCandidato)
+                    .HasConstraintName("FK__VagasFavo__IdCan__48CFD27E");
 
                 entity.HasOne(d => d.IdVagaNavigation)
                     .WithMany(p => p.VagasFavoritas)
                     .HasForeignKey(d => d.IdVaga)
-                    .HasConstraintName("FK__VagasFavo__IdVag__48CFD27E");
+                    .HasConstraintName("FK__VagasFavo__IdVag__49C3F6B7");
             });
 
             OnModelCreatingPartial(modelBuilder);
