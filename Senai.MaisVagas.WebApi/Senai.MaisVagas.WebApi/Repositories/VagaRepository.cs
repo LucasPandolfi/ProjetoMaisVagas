@@ -14,12 +14,69 @@ namespace Senai.MaisVagas.WebApi.Repositories
 
         public List<Vaga> ListarVagas()
         {
-            return ctx.Vaga.ToList();
+            return ctx.Vaga
+                .Select(v => new Vaga()
+                {
+                    IdVaga = v.IdVaga,
+                    IdEmpresa = v.IdEmpresa,
+                    NomeVaga = v.NomeVaga,
+                    LogoEmpresa = v.LogoEmpresa,
+                    DescricaoVaga = v.DescricaoVaga,
+                    SoftSkills = v.SoftSkills,
+                    HardSkills = v.HardSkills,
+                    QualificacaoProfissional = v.QualificacaoProfissional,
+                    NumeroVagaDisponiveis = v.NumeroVagaDisponiveis,
+                    NivelExperiencia = v.NivelExperiencia,
+                    Jornada = v.Jornada,
+                    Setor = v.Setor,
+                    Salario = v.Salario,
+                    Beneficios = v.Beneficios,
+
+                    IdTipoContratoNavigation = new TipoContrato()
+                    {
+                        IdTipoContrato = v.IdTipoContrato,
+                        Nome = v.IdTipoContratoNavigation.Nome
+                    }
+                })
+                .ToList();
+                
         }
 
         public Vaga BuscarPorId(int id)
         {
-            return ctx.Vaga.FirstOrDefault(v => v.IdVaga == id);
+            Vaga vagaBuscada = ctx.Vaga
+
+                .Select(v => new Vaga()
+                {
+                    IdVaga = v.IdVaga,
+                    IdEmpresa = v.IdEmpresa,
+                    NomeVaga = v.NomeVaga,
+                    LogoEmpresa = v.LogoEmpresa,
+                    DescricaoVaga = v.DescricaoVaga,
+                    SoftSkills = v.SoftSkills,
+                    HardSkills = v.HardSkills,
+                    QualificacaoProfissional = v.QualificacaoProfissional,
+                    NumeroVagaDisponiveis = v.NumeroVagaDisponiveis,
+                    NivelExperiencia = v.NivelExperiencia,
+                    Jornada = v.Jornada,
+                    Setor = v.Setor,
+                    Salario = v.Salario,
+                    Beneficios = v.Beneficios,
+
+                    IdTipoContratoNavigation = new TipoContrato()
+                    {
+                        IdTipoContrato = v.IdTipoContrato,
+                        Nome = v.IdTipoContratoNavigation.Nome
+                    }
+                })
+                .FirstOrDefault(v => v.IdVaga == id);
+
+            if (vagaBuscada != null)
+            {
+                return vagaBuscada;
+            }
+
+                return null;
         }
 
         //Tenho que arrumar metodo de vaga, preciso do login para identificar quem é a empresa que cadastrou a vaga, fazendo o login tenho q adaptar o metodo vaga
@@ -92,7 +149,7 @@ namespace Senai.MaisVagas.WebApi.Repositories
             {
                 vagaBuscada.Beneficios = vagaAtualizada.Beneficios;
             }
-            if (vagaBuscada.IdTipoContrato != null)
+            if (vagaBuscada.IdTipoContrato != vagaAtualizada.IdTipoContrato)
             {
                 vagaBuscada.IdTipoContrato = vagaAtualizada.IdTipoContrato;
             }

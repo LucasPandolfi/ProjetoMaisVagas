@@ -95,5 +95,65 @@ namespace Senai.MaisVagas.WebApi.Controllers
         }
 
 
+        /// <summary>
+        /// Atualiza um administrador existente
+        /// </summary>
+        /// <param name="id">ID do administrador que será atualizado</param>
+        /// <param name="administradorAtualizado">Objeto com as novas informações</param>
+        /// <returns>Um status code 204 - No Content</returns>
+        /// <response code="204">Retorna apenas o status code No Content</response>
+        /// <response code="404">Retorna uma mensagem de erro</response>
+        /// <response code="400">Retorna o erro gerado</response>
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Administrador administradorAtualizado)
+        {
+            try
+            {
+                Administrador administradorBuscado = _administradorRepository.BuscarPorId(id);
+
+                if (administradorBuscado != null)
+                {
+                    _administradorRepository.Atualizar(id, administradorAtualizado);
+
+                    return StatusCode(204);
+                }
+
+                return NotFound("Nenhum administrador encontrado para o ID informado");
+            }
+            catch (Exception error)
+            {
+                return BadRequest(error);
+            }
+        }
+
+        /// <summary>
+        /// Deleta um administrador
+        /// </summary>
+        /// <param name="id">ID do administrador que será deletado</param>
+        /// <returns>Um status code 202 - Accepted</returns>
+        /// <response code="202">Retorna apenas o status code Accepted</response>
+        /// <response code="404">Retorna uma mensagem de erro</response>
+        /// <response code="400">Retorna o erro gerado</response>
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                Administrador administradorBuscado = _administradorRepository.BuscarPorId(id);
+
+                if (administradorBuscado != null)
+                {
+                    _administradorRepository.Deletar(id);
+
+                    return StatusCode(202);
+                }
+
+                return NotFound("Nenhum administrador encontrado para o ID informado");
+            }
+            catch (Exception error)
+            {
+                return BadRequest(error);
+            }
+        }
     }
 }

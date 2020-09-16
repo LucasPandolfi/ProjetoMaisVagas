@@ -12,6 +12,14 @@ namespace Senai.MaisVagas.WebApi.Interfaces
 
         List<Empresa> ListarEmpresasCadastradas(bool status);
 
+        Empresa ListarPorId(int id);
+
+        void AprovarEmpresa(int id);
+
         void CadastrarEmpresa(Empresa novaEmpresa);
+
+        void Atualizar(int id, Empresa empresaAtualizada);
+
+        void DeletarEmpresa(int id);
     }
 }

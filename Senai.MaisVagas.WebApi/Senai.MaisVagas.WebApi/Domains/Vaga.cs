@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Senai.MaisVagas.WebApi.Domains
 {
@@ -24,9 +25,11 @@ namespace Senai.MaisVagas.WebApi.Domains
         public string Jornada { get; set; }
         public string Setor { get; set; }
         public long Salario { get; set; }
-        public string Beneficios { get; set; }
-        public int? IdTipoContrato { get; set; }
-        public int? IdEmpresa { get; set; }
+        public string Beneficios { get; set; } 
+        public int IdTipoContrato { get; set; }
+        public int IdEmpresa { get; set; }
+        [JsonIgnore]
+
 
         public virtual Empresa IdEmpresaNavigation { get; set; }
         public virtual TipoContrato IdTipoContratoNavigation { get; set; }

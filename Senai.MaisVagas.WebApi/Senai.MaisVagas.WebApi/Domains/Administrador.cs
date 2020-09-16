@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Senai.MaisVagas.WebApi.Domains
 {
@@ -8,7 +9,7 @@ namespace Senai.MaisVagas.WebApi.Domains
         public int IdAdministrador { get; set; }
         public bool NivelAcesso { get; set; }
         public int IdUsuario { get; set; }
-
+        [JsonIgnore]
         public virtual Usuario IdUsuarioNavigation { get; set; }
     }
 }

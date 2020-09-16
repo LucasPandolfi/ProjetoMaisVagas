@@ -65,6 +65,13 @@ namespace Senai.MaisVagas.WebApi.Controllers
 
         }
 
+        /// <summary>
+        /// Cadastra uma nova empresa
+        /// </summary>
+        /// <param name="novaEmpresa">Objeto com as informações</param>
+        /// <returns>Um status code 201 - Created</returns>
+        /// <response code="201">Retorna apenas o status code Created</response>
+        /// <response code="400">Retorna o erro gerado</response>
         [HttpPost]
         public IActionResult Post(Empresa novaEmpresa)
         {
@@ -73,6 +80,89 @@ namespace Senai.MaisVagas.WebApi.Controllers
                 _empresaRepository.CadastrarEmpresa(novaEmpresa);
 
                 return StatusCode(201);
+            }
+            catch (Exception error)
+            {
+                return BadRequest(error);
+            }
+        }
+
+        [HttpPut]
+        public IActionResult Empresa(int id)
+        {
+            try
+            {
+                Empresa empresaBuscada = _empresaRepository.ListarPorId(id);
+
+                if (empresaBuscada != null)
+                {
+                    _empresaRepository.AprovarEmpresa(id);
+
+                    return StatusCode(204);
+                }
+
+                return NotFound("Nenhuma empresa encontrada para o ID informado");
+            }
+            catch (Exception error)
+            {
+                return BadRequest(error);
+            }
+        }
+
+        /// <summary>
+        /// Atualiza uma empresa existente
+        /// </summary>
+        /// <param name="id">ID da empresa que será atualizada</param>
+        /// <param name="empresaAtualizada">Objeto com as novas informações</param>
+        /// <returns>Um status code 204 - No Content</returns>
+        /// <response code="204">Retorna apenas o status code No Content</response>
+        /// <response code="404">Retorna uma mensagem de erro</response>
+        /// <response code="400">Retorna o erro gerado</response>
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Empresa empresaAtualizada)
+        {
+            try
+            {
+                Empresa empresaBuscada = _empresaRepository.ListarPorId(id);
+
+                if (empresaBuscada != null)
+                {
+                    _empresaRepository.Atualizar(id, empresaAtualizada);
+
+                    return StatusCode(204);
+                }
+
+                return NotFound("Nenhuma empresa encontrada para o ID informado");
+            }
+            catch (Exception error)
+            {
+                return BadRequest(error);
+            }
+        }
+
+        /// <summary>
+        /// Deleta uma empresa
+        /// </summary>
+        /// <param name="id">ID da empresa que será deletada</param>
+        /// <returns>Um status code 202 - Accepted</returns>
+        /// <response code="202">Retorna apenas o status code Accepted</response>
+        /// <response code="404">Retorna uma mensagem de erro</response>
+        /// <response code="400">Retorna o erro gerado</response>
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                Empresa empresaBuscada = _empresaRepository.ListarPorId(id);
+
+                if (empresaBuscada != null)
+                {
+                    _empresaRepository.DeletarEmpresa(id);
+
+                    return StatusCode(202);
+                }
+
+                return NotFound("Nenhuma empresa encontrada para o ID informado");
             }
             catch (Exception error)
             {

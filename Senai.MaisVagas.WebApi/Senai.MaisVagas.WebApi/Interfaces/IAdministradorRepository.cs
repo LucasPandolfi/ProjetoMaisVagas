@@ -13,5 +13,9 @@ namespace Senai.MaisVagas.WebApi.Interfaces
         Administrador BuscarPorId(int id);
 
         void NovoAdministrador(Administrador novoAdministrador);
+
+        void Atualizar(int id, Administrador administradorAtualizado);
+
+        void Deletar(int id);
     }
 }
