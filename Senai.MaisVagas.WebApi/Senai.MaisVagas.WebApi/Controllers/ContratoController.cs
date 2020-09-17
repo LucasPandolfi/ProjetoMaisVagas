@@ -31,7 +31,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="200">Retorna uma lista de contratos</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult ListarTodosContratos()
         {
             try
             {

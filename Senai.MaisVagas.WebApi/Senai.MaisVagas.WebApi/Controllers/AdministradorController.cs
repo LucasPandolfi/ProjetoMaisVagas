@@ -31,7 +31,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="200">Retorna uma lista de administradores</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult ListarTodosAdministradores()
         {
             try
             {
@@ -53,7 +53,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet("{id}")]
-        public IActionResult GetPorId(int id)
+        public IActionResult ListarAdministradorPorId(int id)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="201">Retorna apenas o status code Created</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpPost]
-        public IActionResult Post(Administrador novoAdministrador)
+        public IActionResult CadastrarAdministrador(Administrador novoAdministrador)
         {
             try
             {
@@ -105,7 +105,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpPut("{id}")]
-        public IActionResult Put(int id, Administrador administradorAtualizado)
+        public IActionResult AtualizarAdministrador(int id, Administrador administradorAtualizado)
         {
             try
             {
@@ -135,7 +135,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult DeletarAdministrador(int id)
         {
             try
             {

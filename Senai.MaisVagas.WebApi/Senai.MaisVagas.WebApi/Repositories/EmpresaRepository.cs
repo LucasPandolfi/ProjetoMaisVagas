@@ -115,9 +115,7 @@ namespace Senai.MaisVagas.WebApi.Repositories
 
         public void CadastrarEmpresa(Empresa novaEmpresa)
         {
-            ctx.Empresa.Include(e => e.IdUsuarioNavigation);
-
-            ctx.Add(novaEmpresa);
+            ctx.Empresa.Add(novaEmpresa);
 
             ctx.SaveChanges();
         }
@@ -225,6 +223,10 @@ namespace Senai.MaisVagas.WebApi.Repositories
             if (!empresaBuscada.Verificacao)
             {
                 empresaBuscada.Verificacao = !empresaBuscada.Verificacao;
+
+                ctx.Update(empresaBuscada);
+
+                ctx.SaveChanges();
             }
 
             //!empresaBuscada.Verificacao ?? empresaBuscada.Verificacao = !empresaBuscada.Verificacao

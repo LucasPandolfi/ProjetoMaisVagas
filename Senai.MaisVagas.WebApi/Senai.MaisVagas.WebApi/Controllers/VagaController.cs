@@ -31,7 +31,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="200">Retorna uma lista de vagas</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult ListarTodasVagas()
         {
             try
             {
@@ -52,7 +52,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public IActionResult ListarVagatoPorId(int id)
         {
             try
             {
@@ -79,7 +79,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="201">Retorna apenas o status code Created</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpPost]
-        public IActionResult Post(Vaga novaVaga)
+        public IActionResult CadastrarVaga(Vaga novaVaga)
         {
             try
             {
@@ -102,7 +102,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult DeletarVaga(int id)
         {
             try
             {
@@ -133,7 +133,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpPut("{id}")]
-        public IActionResult Put(int id, Vaga vagaAtualizada)
+        public IActionResult AtualizarVaga(int id, Vaga vagaAtualizada)
         {
             try
             {

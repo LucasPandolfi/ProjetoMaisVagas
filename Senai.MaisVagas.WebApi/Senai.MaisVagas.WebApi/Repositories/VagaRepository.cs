@@ -99,7 +99,11 @@ namespace Senai.MaisVagas.WebApi.Repositories
 
         public void Atualizar(int id, Vaga vagaAtualizada)
         {
-            Vaga vagaBuscada = ctx.Vaga.Find(id);
+            Vaga vagaBuscada = ctx.Vaga.FirstOrDefault(e => e.IdVaga == id);
+
+            TipoContrato tipoContratoBuscado = ctx.TipoContrato.FirstOrDefault(u => u.IdTipoContrato == vagaBuscada.IdTipoContrato);
+
+            vagaBuscada.IdTipoContratoNavigation = tipoContratoBuscado;
 
             if (vagaBuscada.NomeVaga != null)
             {

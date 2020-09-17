@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Senai.MaisVagas.WebApi.Interfaces
 {
-    interface IContratoRepository
+    interface IUsuarioRepository
     {
-        void CadastrarContrato(Contrato novoContrato);
-        List<Contrato> ListarContrato();
+        Usuario Login(string email, string senha);
     }
 }

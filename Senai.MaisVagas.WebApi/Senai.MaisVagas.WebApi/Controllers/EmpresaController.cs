@@ -32,7 +32,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="200">Retorna uma lista de empresas</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult ListarTodasEmpresas()
         {
             try
             {
@@ -52,7 +52,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="200">Retorna uma lista de empresas cadastradas</response>
         /// <response code="404">Retorna o erro gerado</response>
         [HttpGet("Verificacao/{status}")]
-        public IActionResult GetEmpresaCadastrada(bool status)
+        public IActionResult ListarEmpresasCadastradas(bool status)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="201">Retorna apenas o status code Created</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpPost]
-        public IActionResult Post(Empresa novaEmpresa)
+        public IActionResult CadastrarEmpresa(Empresa novaEmpresa)
         {
             try
             {
@@ -87,8 +87,16 @@ namespace Senai.MaisVagas.WebApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Aprova o cadstro de uma empresa 
+        /// </summary>
+        /// <param name="id">ID da empresa que será aprovada</param>
+        /// <returns>Um status code 204 - No Content</returns>
+        /// <response code="204">Retorna apenas o status code No Content</response>
+        /// <response code="404">Retorna uma mensagem de erro</response>
+        /// <response code="400">Retorna o erro gerado</response>
         [HttpPut]
-        public IActionResult Empresa(int id)
+        public IActionResult AprovarEmpresa(int id)
         {
             try
             {
@@ -119,7 +127,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpPut("{id}")]
-        public IActionResult Put(int id, Empresa empresaAtualizada)
+        public IActionResult AtualizarEmpresa(int id, Empresa empresaAtualizada)
         {
             try
             {
@@ -149,7 +157,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult DeletarEmpresa(int id)
         {
             try
             {

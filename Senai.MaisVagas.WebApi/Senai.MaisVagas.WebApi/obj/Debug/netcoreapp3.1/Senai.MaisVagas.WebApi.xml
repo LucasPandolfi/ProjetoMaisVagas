@@ -4,7 +4,7 @@
         <name>Senai.MaisVagas.WebApi</name>
     </assembly>
     <members>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.AdministradorController.Get">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.AdministradorController.ListarTodosAdministradores">
             <summary>
             Lista todos os administradores
             </summary>
@@ -12,7 +12,7 @@
             <response code="200">Retorna uma lista de administradores</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.AdministradorController.GetPorId(System.Int32)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.AdministradorController.ListarAdministradorPorId(System.Int32)">
             <summary>
             Busca um administrador através do ID
             </summary>
@@ -22,7 +22,7 @@
             <response code="404">Retorna uma mensagem de erro</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.AdministradorController.Post(Senai.MaisVagas.WebApi.Domains.Administrador)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.AdministradorController.CadastrarAdministrador(Senai.MaisVagas.WebApi.Domains.Administrador)">
             <summary>
             Cadastra um novo administrador
             </summary>
@@ -31,7 +31,7 @@
             <response code="201">Retorna apenas o status code Created</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.AdministradorController.Put(System.Int32,Senai.MaisVagas.WebApi.Domains.Administrador)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.AdministradorController.AtualizarAdministrador(System.Int32,Senai.MaisVagas.WebApi.Domains.Administrador)">
             <summary>
             Atualiza um administrador existente
             </summary>
@@ -42,7 +42,7 @@
             <response code="404">Retorna uma mensagem de erro</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.AdministradorController.Delete(System.Int32)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.AdministradorController.DeletarAdministrador(System.Int32)">
             <summary>
             Deleta um administrador
             </summary>
@@ -52,7 +52,7 @@
             <response code="404">Retorna uma mensagem de erro</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.CandidatoController.Get">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.CandidatoController.ListarTodosCandidato">
             <summary>
             Lista todos os candidatos
             </summary>
@@ -60,7 +60,7 @@
             <response code="200">Retorna uma lista de candidatos</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.CandidatoController.GetPorId(System.Int32)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.CandidatoController.ListarCandidatoPorId(System.Int32)">
             <summary>
             Busca um candidato através do ID
             </summary>
@@ -70,7 +70,7 @@
             <response code="404">Retorna uma mensagem de erro</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.CandidatoController.Post(Senai.MaisVagas.WebApi.Domains.Candidato)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.CandidatoController.CadastrarCandidato(Senai.MaisVagas.WebApi.Domains.Candidato)">
             <summary>
             Cadastra um novo candidato
             </summary>
@@ -79,7 +79,7 @@
             <response code="201">Retorna apenas o status code Created</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.CandidatoController.Put(System.Int32,Senai.MaisVagas.WebApi.Domains.Candidato)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.CandidatoController.AtualizarCandidato(System.Int32,Senai.MaisVagas.WebApi.Domains.Candidato)">
             <summary>
             Atualiza um candidato existente
             </summary>
@@ -90,7 +90,7 @@
             <response code="404">Retorna uma mensagem de erro</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.CandidatoController.Delete(System.Int32)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.CandidatoController.DeletarCandidato(System.Int32)">
             <summary>
             Deleta um candidato
             </summary>
@@ -100,7 +100,7 @@
             <response code="404">Retorna uma mensagem de erro</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.ContratoController.Get">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.ContratoController.ListarTodosContratos">
             <summary>
             Lista todos as contrato
             </summary>
@@ -108,7 +108,7 @@
             <response code="200">Retorna uma lista de contratos</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.EmpresaController.Get">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.EmpresaController.ListarTodasEmpresas">
             <summary>
             Lista todas as empresas
             </summary>
@@ -116,7 +116,7 @@
             <response code="200">Retorna uma lista de empresas</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.EmpresaController.GetEmpresaCadastrada(System.Boolean)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.EmpresaController.ListarEmpresasCadastradas(System.Boolean)">
             <summary>
             Lista todas as empresas cadastradas
             </summary>
@@ -124,7 +124,7 @@
             <response code="200">Retorna uma lista de empresas cadastradas</response>
             <response code="404">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.EmpresaController.Post(Senai.MaisVagas.WebApi.Domains.Empresa)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.EmpresaController.CadastrarEmpresa(Senai.MaisVagas.WebApi.Domains.Empresa)">
             <summary>
             Cadastra uma nova empresa
             </summary>
@@ -133,7 +133,17 @@
             <response code="201">Retorna apenas o status code Created</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.EmpresaController.Put(System.Int32,Senai.MaisVagas.WebApi.Domains.Empresa)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.EmpresaController.AprovarEmpresa(System.Int32)">
+            <summary>
+            Aprova o cadstro de uma empresa 
+            </summary>
+            <param name="id">ID da empresa que será aprovada</param>
+            <returns>Um status code 204 - No Content</returns>
+            <response code="204">Retorna apenas o status code No Content</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+        </member>
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.EmpresaController.AtualizarEmpresa(System.Int32,Senai.MaisVagas.WebApi.Domains.Empresa)">
             <summary>
             Atualiza uma empresa existente
             </summary>
@@ -144,7 +154,7 @@
             <response code="404">Retorna uma mensagem de erro</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.EmpresaController.Delete(System.Int32)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.EmpresaController.DeletarEmpresa(System.Int32)">
             <summary>
             Deleta uma empresa
             </summary>
@@ -154,7 +164,34 @@
             <response code="404">Retorna uma mensagem de erro</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.VagaController.Get">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.InscricaoController.ListarTodosCandidato">
+            <summary>
+            Lista todas as inscrições
+            </summary>
+            <returns>Uma lista de inscrições e um status code 200 - Ok</returns>
+            <response code="200">Retorna uma lista de inscrições</response>
+            <response code="400">Retorna o erro gerado</response>
+        </member>
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.InscricaoController.ListarInscricaoPorId(System.Int32)">
+            <summary>
+            Busca uma inscricação através do ID
+            </summary>
+            <param name="id">ID da inscrição que será buscada</param>
+            <returns>Uma inscricao buscada e um status code 200 - Ok</returns>
+            <response code="200">Retorna a inscricao buscada</response>
+            <response code="404">Retorna uma mensagem de erro</response>
+            <response code="400">Retorna o erro gerado</response>
+        </member>
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.LoginController.Post(Senai.MaisVagas.WebApi.ViewModels.LoginViewModel)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="login">Objeto login que contém o e-mail e a senha do usuário</param>
+            <returns>Retorna um token com as informações do usuário</returns>
+            <response code="200">Retorna o token gerado</response>
+            <response code="400">Retorna o erro gerado com uma mensagem personalizada</response>
+        </member>
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.VagaController.ListarTodasVagas">
             <summary>
             Lista todas as vagas
             </summary>
@@ -162,7 +199,7 @@
             <response code="200">Retorna uma lista de vagas</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.VagaController.GetById(System.Int32)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.VagaController.ListarVagatoPorId(System.Int32)">
             <summary>
             Busca uma vaga através do ID
             </summary>
@@ -172,7 +209,7 @@
             <response code="404">Retorna uma mensagem de erro</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.VagaController.Post(Senai.MaisVagas.WebApi.Domains.Vaga)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.VagaController.CadastrarVaga(Senai.MaisVagas.WebApi.Domains.Vaga)">
             <summary>
             Cadastra uma nova vaga
             </summary>
@@ -181,7 +218,7 @@
             <response code="201">Retorna apenas o status code Created</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.VagaController.Delete(System.Int32)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.VagaController.DeletarVaga(System.Int32)">
             <summary>
             Deleta uma vaga
             </summary>
@@ -191,7 +228,7 @@
             <response code="404">Retorna uma mensagem de erro</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.VagaController.Put(System.Int32,Senai.MaisVagas.WebApi.Domains.Vaga)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.VagaController.AtualizarVaga(System.Int32,Senai.MaisVagas.WebApi.Domains.Vaga)">
             <summary>
             Atualiza uma vaga existente
             </summary>

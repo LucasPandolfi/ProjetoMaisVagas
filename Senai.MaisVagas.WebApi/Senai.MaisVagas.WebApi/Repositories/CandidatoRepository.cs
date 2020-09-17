@@ -37,6 +37,14 @@ namespace Senai.MaisVagas.WebApi.Repositories
                         Estado = c.IdUsuarioNavigation.Estado,
                         Cidade = c.IdUsuarioNavigation.Cidade,
                         Bairro = c.IdUsuarioNavigation.Bairro
+                    },
+
+                    IdCursoNavigation = new Curso()
+                    {
+                        IdCurso = c.IdCursoNavigation.IdCurso,
+                        Nome = c.IdCursoNavigation.Nome,
+                        Termo = c.IdCursoNavigation.Termo,
+                        Turno = c.IdCursoNavigation.Turno
                     }
 
                 }).ToList();
@@ -67,6 +75,14 @@ namespace Senai.MaisVagas.WebApi.Repositories
                       Estado = c.IdUsuarioNavigation.Estado,
                       Cidade = c.IdUsuarioNavigation.Cidade,
                       Bairro = c.IdUsuarioNavigation.Bairro
+                  },
+
+                  IdCursoNavigation = new Curso()
+                  {
+                      IdCurso = c.IdCursoNavigation.IdCurso,
+                      Nome = c.IdCursoNavigation.Nome,
+                      Termo = c.IdCursoNavigation.Termo,
+                      Turno = c.IdCursoNavigation.Turno
                   }
 
               })
@@ -82,16 +98,22 @@ namespace Senai.MaisVagas.WebApi.Repositories
 
         public void Cadastrar(Candidato novoCandidato)
         {
-            ctx.Candidato.Include(a => a.IdUsuarioNavigation);
-
-            ctx.Add(novoCandidato);
+            ctx.Candidato.Add(novoCandidato);
 
             ctx.SaveChanges();
         }
 
         public void Atualizar(int id, Candidato candidatoAtualizado)
         {
-            Candidato candidatoBuscado = ctx.Candidato.Find(id);
+            Candidato candidatoBuscado = ctx.Candidato.FirstOrDefault(e => e.IdCandidato == id);
+
+            Usuario usuarioBuscado = ctx.Usuario.FirstOrDefault(u => u.IdUsuario == candidatoBuscado.IdUsuario);
+
+            Curso cursoBuscado = ctx.Curso.FirstOrDefault(c => c.IdCurso == candidatoBuscado.IdCurso);
+
+            candidatoBuscado.IdUsuarioNavigation = usuarioBuscado;
+
+            candidatoBuscado.IdCursoNavigation = cursoBuscado;
 
             if (candidatoBuscado.Cpf != null)
             {
@@ -141,18 +163,14 @@ namespace Senai.MaisVagas.WebApi.Repositories
             {
                 candidatoBuscado.IdUsuarioNavigation.Bairro = candidatoAtualizado.IdUsuarioNavigation.Bairro;
             }
-            if (candidatoBuscado.IdCursoNavigation.Nome != null)
+            if (candidatoBuscado.IdCurso != candidatoAtualizado.IdCurso)
             {
-                candidatoBuscado.IdCursoNavigation.Nome = candidatoAtualizado.IdCursoNavigation.Nome;
+                candidatoBuscado.IdCurso = candidatoAtualizado.IdCurso;
             }
-            if (candidatoBuscado.IdCursoNavigation.Termo != null)
-            {
-                candidatoBuscado.IdCursoNavigation.Termo = candidatoAtualizado.IdCursoNavigation.Termo;
-            }
-            if (candidatoBuscado.IdCursoNavigation.Turno != null)
-            {
-                candidatoBuscado.IdCursoNavigation.Turno = candidatoAtualizado.IdCursoNavigation.Turno;
-            }
+
+            ctx.Candidato.Update(candidatoBuscado);
+
+            ctx.SaveChanges();
         }
 
         public void Deletar(int id)
