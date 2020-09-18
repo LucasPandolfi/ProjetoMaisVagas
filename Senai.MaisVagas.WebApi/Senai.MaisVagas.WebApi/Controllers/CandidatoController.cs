@@ -102,7 +102,8 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="204">Retorna apenas o status code No Content</response>
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
-        [HttpPut("id")]
+        [Route("{id:int}")]
+        [HttpPut]
         public IActionResult AtualizarCandidato(int id, Candidato candidatoAtualizado)
         {
             try

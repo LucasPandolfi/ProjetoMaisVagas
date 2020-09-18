@@ -33,7 +33,13 @@ namespace Senai.MaisVagas.WebApi.Repositories
                        Cep = a.IdUsuarioNavigation.Cep,
                        Estado = a.IdUsuarioNavigation.Estado,
                        Cidade = a.IdUsuarioNavigation.Cidade,
-                       Bairro = a.IdUsuarioNavigation.Bairro
+                       Bairro = a.IdUsuarioNavigation.Bairro,
+
+                       IdTipoUsuarioNavigation = new TipoUsuario()
+                       {
+                           IdTipoUsuario = a.IdUsuarioNavigation.IdTipoUsuarioNavigation.IdTipoUsuario,
+                           Titulo = a.IdUsuarioNavigation.IdTipoUsuarioNavigation.Titulo
+                       }
                    }
                })
                .ToList();
@@ -59,7 +65,13 @@ namespace Senai.MaisVagas.WebApi.Repositories
                        Cep = a.IdUsuarioNavigation.Cep,
                        Estado = a.IdUsuarioNavigation.Estado,
                        Cidade = a.IdUsuarioNavigation.Cidade,
-                       Bairro = a.IdUsuarioNavigation.Bairro
+                       Bairro = a.IdUsuarioNavigation.Bairro,
+
+                       IdTipoUsuarioNavigation = new TipoUsuario()
+                       {
+                           IdTipoUsuario = a.IdUsuarioNavigation.IdTipoUsuarioNavigation.IdTipoUsuario,
+                           Titulo = a.IdUsuarioNavigation.IdTipoUsuarioNavigation.Titulo
+                       }
                    }
 
                })

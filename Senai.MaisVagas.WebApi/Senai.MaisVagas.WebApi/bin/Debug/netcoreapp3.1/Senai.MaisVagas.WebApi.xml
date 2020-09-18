@@ -182,7 +182,7 @@
             <response code="404">Retorna uma mensagem de erro</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
-        <member name="M:Senai.MaisVagas.WebApi.Controllers.LoginController.Post(Senai.MaisVagas.WebApi.ViewModels.LoginViewModel)">
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.LoginController.Login(Senai.MaisVagas.WebApi.ViewModels.LoginViewModel)">
             <summary>
             Valida o usuário
             </summary>

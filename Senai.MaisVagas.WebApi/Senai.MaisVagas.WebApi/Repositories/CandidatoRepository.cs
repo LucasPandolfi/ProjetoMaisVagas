@@ -36,7 +36,13 @@ namespace Senai.MaisVagas.WebApi.Repositories
                         Telefone = c.IdUsuarioNavigation.Telefone,
                         Estado = c.IdUsuarioNavigation.Estado,
                         Cidade = c.IdUsuarioNavigation.Cidade,
-                        Bairro = c.IdUsuarioNavigation.Bairro
+                        Bairro = c.IdUsuarioNavigation.Bairro,
+
+                        IdTipoUsuarioNavigation = new TipoUsuario()
+                        {
+                            IdTipoUsuario = c.IdUsuarioNavigation.IdTipoUsuarioNavigation.IdTipoUsuario,
+                            Titulo = c.IdUsuarioNavigation.IdTipoUsuarioNavigation.Titulo
+                        }
                     },
 
                     IdCursoNavigation = new Curso()
@@ -74,7 +80,13 @@ namespace Senai.MaisVagas.WebApi.Repositories
                       Telefone = c.IdUsuarioNavigation.Telefone,
                       Estado = c.IdUsuarioNavigation.Estado,
                       Cidade = c.IdUsuarioNavigation.Cidade,
-                      Bairro = c.IdUsuarioNavigation.Bairro
+                      Bairro = c.IdUsuarioNavigation.Bairro,
+
+                      IdTipoUsuarioNavigation = new TipoUsuario()
+                      {
+                          IdTipoUsuario = c.IdUsuarioNavigation.IdTipoUsuarioNavigation.IdTipoUsuario,
+                          Titulo = c.IdUsuarioNavigation.IdTipoUsuarioNavigation.Titulo
+                      }
                   },
 
                   IdCursoNavigation = new Curso()

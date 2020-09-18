@@ -35,7 +35,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="200">Retorna o token gerado</response>
         /// <response code="400">Retorna o erro gerado com uma mensagem personalizada</response>
         [HttpPost]
-        public IActionResult Post(LoginViewModel login)
+        public IActionResult Login(LoginViewModel login)
         {
             try
             {
@@ -54,6 +54,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
 
                     new Claim(ClaimTypes.Role, usuarioBuscado.IdTipoUsuarioNavigation.Titulo.ToString())
                 };
+
 
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("MaisVagas-chave-autenticacao"));
 
