@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.MaisVagas.WebApi.Domains;
@@ -31,6 +32,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="200">Retorna uma lista de candidatos</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet]
+        [Authorize(Roles = "Administrador, Empresa")]
         public IActionResult ListarTodosCandidato()
         {
             try
@@ -52,6 +54,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet("{id}")]
+        [Authorize(Roles = "Administrador, Empresa")]
         public IActionResult ListarCandidatoPorId(int id)
         {
             try
@@ -104,6 +107,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="400">Retorna o erro gerado</response>
         [Route("{id:int}")]
         [HttpPut]
+        [Authorize(Roles = "Candidato")]
         public IActionResult AtualizarCandidato(int id, Candidato candidatoAtualizado)
         {
             try
@@ -134,6 +138,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrador")]
         public IActionResult DeletarCandidato(int id)
         {
             try

@@ -182,6 +182,15 @@
             <response code="404">Retorna uma mensagem de erro</response>
             <response code="400">Retorna o erro gerado</response>
         </member>
+        <member name="M:Senai.MaisVagas.WebApi.Controllers.InscricaoController.Candidatura(Senai.MaisVagas.WebApi.Domains.Inscricao)">
+            <summary>
+            Cadastra uma nova candidatura
+            </summary>
+            <param name="novaInscricao">Objeto com as informações</param>
+            <returns>Um status code 201 - Created</returns>
+            <response code="201">Retorna apenas o status code Created</response>
+            <response code="400">Retorna o erro gerado</response>
+        </member>
         <member name="M:Senai.MaisVagas.WebApi.Controllers.LoginController.Login(Senai.MaisVagas.WebApi.ViewModels.LoginViewModel)">
             <summary>
             Valida o usuário

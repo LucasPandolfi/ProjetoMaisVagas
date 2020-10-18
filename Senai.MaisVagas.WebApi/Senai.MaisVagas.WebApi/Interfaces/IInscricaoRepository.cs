@@ -10,5 +10,7 @@ namespace Senai.MaisVagas.WebApi.Interfaces
     {
         List<Inscricao> Listar();
         Inscricao BuscarPorId(int id);
+
+        void Candidatura(Inscricao novaInscricao);
     }
 }

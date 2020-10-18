@@ -1,0 +1,709 @@
+{
+	"info": {
+		"_postman_id": "48aa7910-beb1-4be5-bfa8-b2610c958f56",
+		"name": "Senai.MaisVagas.WebApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "ListarEmpresas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Empresa",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarEmpresasCadastradas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Empresa/Verificacao/true",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empresa",
+								"Verificacao",
+								"true"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarEmpresasComCadastroPendente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Empresa/Verificacao/false",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empresa",
+								"Verificacao",
+								"false"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar empresas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cnpj\": \"16789045361146\",\r\n  \"cnae\": \"1234768578\",\r\n  \"numeroEmpregados\": \"55\",\r\n  \"nomeParaContato\": \"Caroline\",\r\n  \"imagemCarimboCnpj\": \"string\",\r\n  \"imagemCarimboAssinaturaDoResponsavel\": \"string\",\r\n  \"verificacao\": false,\r\n  \"idUsuarioNavigation\": {\r\n    \"nome\": \"cloud\",\r\n    \"email\": \"carolineSouzinhcvc@email.com\",\r\n    \"senha\": \"123\",\r\n    \"foto\": \"string\",\r\n    \"telefone\": \"11987634526\",\r\n    \"cep\": \"11111111102\",\r\n    \"estado\": \"São Paulo\",\r\n    \"cidade\": \"São Paulo\",\r\n    \"bairro\": \"Vila mirante\",\r\n    \"IdTipoUsuario\": 3\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/Empresa",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar empresa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cnpj\": \"16789045361120\",\r\n  \"cnae\": \"1234768528\",\r\n  \"numeroEmpregados\": \"45\",\r\n  \"nomeParaContato\": \"Amanda Pandolfi\",\r\n  \"verificacao\": false,\r\n  \"imagemCarimboCnpj\": \"string\",\r\n  \"imagemCarimboAssinaturaDoResponsavel\": \"string\",\r\n  \"idUsuarioNavigation\": {\r\n    \"nome\": \"brq\",\r\n    \"email\": \"brqw@email.com\",\r\n    \"senha\": \"123\",\r\n    \"foto\": \"string\",\r\n    \"telefone\": \"11987456321\",\r\n    \"cep\": \"12222222337\",\r\n    \"estado\": \"São Paulo\",\r\n    \"cidade\": \"São Paulo\",\r\n    \"bairro\": \"Vila Mirante\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/Empresa/3002",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empresa",
+								"3002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aceitar pedido de empresa",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 34\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/Empresa?id=3002",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empresa"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3002"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar empresas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Empresa/3002",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empresa",
+								"3002"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Administrador",
+			"item": [
+				{
+					"name": "Listar Administrador",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Administrador",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Administrador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar administrador por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Administrador/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Administrador",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar administrador",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nivelAcesso\": true,\r\n    \"IdUsuarioNavigation\":\r\n    {\r\n        \"nome\": \"Davi\",\r\n        \"email\": \"Davi16@email.com\",\r\n        \"senha\": \"123\",\r\n        \"foto\": \"string\",\r\n        \"telefone\": \"11987654532\",\r\n        \"cep\": \"12345678999\",\r\n        \"estado\": \"São Paulo\",\r\n        \"cidade\": \"São Paulo\",\r\n        \"bairro\": \"Pirituba\",\r\n        \"IdTipoUsuario\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/Administrador",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Administrador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Administrador",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NivelAcesso\": \"true\",\r\n    \"idUsuarioNavigation\":{\r\n        \"nome\": \"Lucas Garcia\",\r\n        \"email\": \"lucasdatalivee@gmail.com\",\r\n        \"senha\": \"123\",\r\n        \"foto\": \"Foto\",\r\n        \"telefone\": \"+55 11 22222-2222\",\r\n        \"cep\": \"02875935\",\r\n        \"estado\": \"São Paulo\",\r\n        \"cidade\": \"Mogi Das Cruzes\",\r\n        \"bairro\": \"Vila Oliveira\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/Administrador/3002",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Administrador",
+								"3002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar administrador",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Administrador/3002",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Administrador",
+								"3002"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Vaga",
+			"item": [
+				{
+					"name": "Listar vagas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Vaga",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Vaga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar vagas por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Vaga/3",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Vaga",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar vagas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeVaga\": \"Analista e desenvolvedor web\",\r\n    \"logoEmpresa\": \"string\",\r\n    \"descricaoVaga\": \"Uma vaga para analisar sistemas desenvovivdos e arrumar possiveis erros\",\r\n    \"softSkills\": \"Trabalho em equipe, focado e determinado\",\r\n    \"hardSkills\": \"c#, SQLServer e Entity.Framework\",\r\n    \"qualificacaoProfissional\": \"Junior\",\r\n    \"numeroVagaDisponiveis\": \"20\",\r\n    \"nivelExperiencia\": \"estagiário\",\r\n    \"jornada\": \"6 horas\",\r\n    \"setor\": \"Setor de análise\",\r\n    \"salario\": 1700,\r\n    \"beneficios\": \"Vr\",\r\n    \"idTipoContrato\": 4,\r\n    \"idEmpresa\": 2,\r\n    \"IdNavigationTipoContrato\":{\r\n        \"idTipoContrato\": 4\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/Vaga",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Vaga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar vaga",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeVaga\": \"FullStack junior\",\r\n    \"logoEmpresa\": \"img\",\r\n    \"descricaoVaga\": \"Vaga que busca Desenvolvedores Full Stack junior com algumas especificações, sendo elas, Ingles intermediario, Analise de dados e Redes e Computadores\",\r\n    \"softSkills\": \"Proatividade, Flexibilidade e Criatividade.\",\r\n    \"hardSkills\": \"Tecnicas Gerais, Detecções e Soluções de Problemas\",\r\n    \"qualificacaoProfissional\": \"senior\",\r\n    \"numeroVagaDisponiveis\": \"23 vagas\",\r\n    \"nivelExperiencia\": \"1 ano no mercado\",\r\n    \"jornada\": \"8 horas\",\r\n    \"setor\": \"Setor de desenvolvimento\",\r\n    \"salario\": 1900,\r\n    \"beneficios\": \"Vt+Vr\",\r\n    \"IdTipoContrato\": 3\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/Vaga/2002",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Vaga",
+								"2002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar vagas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Vaga/2002",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Vaga",
+								"2002"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Contrato",
+			"item": [
+				{
+					"name": "Listar Contratos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Contrato",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Contrato"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Candidato",
+			"item": [
+				{
+					"name": "Listar candidatos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Candidato",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar candidatos por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Candidato/1004",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidato",
+								"1004"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar candidato",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n  \"cpf\": \"11121324734255\",\r\n  \"dataNascimento\": \"2000-09-17\",\r\n  \"matricula\": \"12132466\",\r\n  \"alunoExAluno\": true,\r\n  \"curriculo\": \"string\",\r\n  \"IdCurso\": 2,\r\n  \r\n  \"idUsuarioNavigation\": {\r\n    \"nome\": \"Davi\",\r\n    \"email\": \"Dani17@gmail.com\",\r\n    \"senha\": \"123\",\r\n    \"foto\": \"string\",\r\n    \"telefone\": \"11986523476\",\r\n    \"cep\": \"11702945633\",\r\n    \"estado\": \"São Paulo\",\r\n    \"cidade\": \"São Paulo\",\r\n    \"bairro\": \"Vila Clarice\",\r\n    \"IdTipoUsuario\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/Candidato",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar candidato",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cpf\": \"12345678934223\",\r\n  \"dataNascimento\": \"2002-09-17\",\r\n  \"matricula\": \"98564753\",\r\n  \"alunoExAluno\": true,\r\n  \"curriculo\": \"string\",\r\n  \"idCurso\": 1,\r\n  \r\n  \"idUsuarioNavigation\": {\r\n    \"nome\": \"Erick\",\r\n    \"email\": \"Erickke@email.com\",\r\n    \"senha\": \"123\",\r\n    \"foto\": \"string\",\r\n    \"telefone\": \"11989563465\",\r\n    \"cep\": \"11128490874\",\r\n    \"estado\": \"São Paulo\",\r\n    \"cidade\": \"São Paulo\",\r\n    \"bairro\": \"Pirituba\"\r\n     }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/Candidato/2002",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidato",
+								"2002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir candidato ",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Candidato/2002",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Candidato",
+								"2002"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Inscricao",
+			"item": [
+				{
+					"name": "Listar todas as inscrições",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Inscricao",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Inscricao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar inscricao por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/Inscricao/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Inscricao",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Candidatar-se vaga",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/Inscricao",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Inscricao"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\": \"Davi15@email.com\",\r\n    \"Senha\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/Login?Email=Davi15%40email.com&Senha=123",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Login"
+							],
+							"query": [
+								{
+									"key": "Email",
+									"value": "Davi15%40email.com"
+								},
+								{
+									"key": "Senha",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

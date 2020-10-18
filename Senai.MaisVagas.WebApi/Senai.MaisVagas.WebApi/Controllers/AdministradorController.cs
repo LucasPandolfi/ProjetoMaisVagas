@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.MaisVagas.WebApi.Domains;
@@ -31,6 +32,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="200">Retorna uma lista de administradores</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet]
+        [Authorize(Roles = "Administrador")]
         public IActionResult ListarTodosAdministradores()
         {
             try
@@ -53,6 +55,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet("{id}")]
+        [Authorize(Roles = "Administrador")]
         public IActionResult ListarAdministradorPorId(int id)
         {
             try
@@ -80,6 +83,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="201">Retorna apenas o status code Created</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpPost]
+        [Authorize(Roles = "Administrador")]
         public IActionResult CadastrarAdministrador(Administrador novoAdministrador)
         {
             try
@@ -105,6 +109,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpPut("{id}")]
+        [Authorize(Roles = "Administrador")]
         public IActionResult AtualizarAdministrador(int id, Administrador administradorAtualizado)
         {
             try
@@ -135,6 +140,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrador")]
         public IActionResult DeletarAdministrador(int id)
         {
             try

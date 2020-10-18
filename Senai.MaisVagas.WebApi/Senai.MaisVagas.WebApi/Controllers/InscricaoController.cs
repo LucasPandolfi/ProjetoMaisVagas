@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.MaisVagas.WebApi.Domains;
@@ -17,11 +18,11 @@ namespace Senai.MaisVagas.WebApi.Controllers
     [ApiController]
     public class InscricaoController : ControllerBase
     {
-        IInscricaoRepository _InscricaoRepository;
+        IInscricaoRepository _inscricaoRepository;
 
         public InscricaoController()
         {
-            _InscricaoRepository = new InscricaoRepository();
+            _inscricaoRepository = new InscricaoRepository();
         }
 
         /// <summary>
@@ -31,11 +32,13 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="200">Retorna uma lista de inscrições</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet]
+        [Authorize(Roles = "Administrador, Empresa")]
+
         public IActionResult ListarTodosCandidato()
         {
             try
             {
-                return Ok(_InscricaoRepository.Listar());
+                return Ok(_inscricaoRepository.Listar());
             }
             catch (Exception error)
             {
@@ -52,11 +55,12 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet("{id}")]
+        [Authorize(Roles = "Administrador, Empresa")]
         public IActionResult ListarInscricaoPorId(int id)
         {
             try
             {
-                Inscricao inscricaoBuscada = _InscricaoRepository.BuscarPorId(id);
+                Inscricao inscricaoBuscada = _inscricaoRepository.BuscarPorId(id);
 
                 if (inscricaoBuscada != null)
                 {
@@ -64,6 +68,29 @@ namespace Senai.MaisVagas.WebApi.Controllers
                 }
 
                 return NotFound("Nenhuma inscrição encontrada para o ID informado");
+            }
+            catch (Exception error)
+            {
+                return BadRequest(error);
+            }
+        }
+
+        /// <summary>
+        /// Cadastra uma nova candidatura
+        /// </summary>
+        /// <param name="novaInscricao">Objeto com as informações</param>
+        /// <returns>Um status code 201 - Created</returns>
+        /// <response code="201">Retorna apenas o status code Created</response>
+        /// <response code="400">Retorna o erro gerado</response>
+        [HttpPost]
+        [Authorize(Roles = "Candidato")]
+        public IActionResult Candidatura(Inscricao novaInscricao)
+        {
+            try
+            {
+                _inscricaoRepository.Candidatura(novaInscricao);
+
+                return StatusCode(201);
             }
             catch (Exception error)
             {

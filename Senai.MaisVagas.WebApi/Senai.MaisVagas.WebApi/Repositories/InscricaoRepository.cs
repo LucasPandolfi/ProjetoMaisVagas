@@ -85,6 +85,13 @@ namespace Senai.MaisVagas.WebApi.Repositories
 
         }
 
+        public void Candidatura(Inscricao novaInscricao)
+        {
+            ctx.Inscricao.Add(novaInscricao);
+
+            ctx.SaveChanges();
+        }
+
         public List<Inscricao> Listar()
         {
             return ctx.Inscricao

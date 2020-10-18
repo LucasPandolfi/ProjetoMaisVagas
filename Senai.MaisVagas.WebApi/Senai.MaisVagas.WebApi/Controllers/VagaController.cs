@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.MaisVagas.WebApi.Domains;
@@ -31,6 +32,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="200">Retorna uma lista de vagas</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet]
+        [Authorize]
         public IActionResult ListarTodasVagas()
         {
             try
@@ -52,6 +54,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet("{id}")]
+        [Authorize]
         public IActionResult ListarVagatoPorId(int id)
         {
             try
@@ -79,6 +82,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="201">Retorna apenas o status code Created</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpPost]
+        [Authorize(Roles = "Empresa")]
         public IActionResult CadastrarVaga(Vaga novaVaga)
         {
             try
@@ -102,6 +106,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrador, Empresa")]
         public IActionResult DeletarVaga(int id)
         {
             try
@@ -133,6 +138,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpPut("{id}")]
+        [Authorize(Roles = "Administrador, Empresa")]
         public IActionResult AtualizarVaga(int id, Vaga vagaAtualizada)
         {
             try

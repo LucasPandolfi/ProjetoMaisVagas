@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.MaisVagas.WebApi.Interfaces;
@@ -31,6 +32,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="200">Retorna uma lista de contratos</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet]
+        [Authorize(Roles = "Administrador, Empresa")]
         public IActionResult ListarTodosContratos()
         {
             try

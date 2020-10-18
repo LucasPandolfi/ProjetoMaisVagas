@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.MaisVagas.WebApi.Domains;
@@ -32,6 +33,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="200">Retorna uma lista de empresas</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpGet]
+        [Authorize(Roles = "Administrador")]
         public IActionResult ListarTodasEmpresas()
         {
             try
@@ -52,6 +54,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="200">Retorna uma lista de empresas cadastradas</response>
         /// <response code="404">Retorna o erro gerado</response>
         [HttpGet("Verificacao/{status}")]
+        [Authorize(Roles = "Administrador")]
         public IActionResult ListarEmpresasCadastradas(bool status)
         {
             try
@@ -96,6 +99,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpPut]
+        [Authorize(Roles = "Administrador")]
         public IActionResult AprovarEmpresa(int id)
         {
             try
@@ -127,6 +131,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpPut("{id}")]
+        [Authorize(Roles = "Empresa")]
         public IActionResult AtualizarEmpresa(int id, Empresa empresaAtualizada)
         {
             try
@@ -157,6 +162,7 @@ namespace Senai.MaisVagas.WebApi.Controllers
         /// <response code="404">Retorna uma mensagem de erro</response>
         /// <response code="400">Retorna o erro gerado</response>
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrador")]
         public IActionResult DeletarEmpresa(int id)
         {
             try
