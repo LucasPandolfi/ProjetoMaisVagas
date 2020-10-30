@@ -1,0 +1,52 @@
+1 - Como funciona a parte de gestão no Senai atualmente???
+R:
+***Canal de vagas passa por muitos setores dependendo do responsavel que recebeu o pedido de vaga.
+O possarle conversa com a empresa quando não tem tanta informação disponibilizada pela empresa
+a plataforma já disponibilize a documentação necessaria para fazer a contratação do aluno***
+
+2 - Como é feita a comunicação entre o Senai e as empresas atualmente????
+R:
+***ele precisa entrar no sistema do senai e cadastrar o aluno manualmente no curso vivencia profissional
+precisando lançar todos os dados do contrato em um excel. 
+esse processo manual naturalmente se perde no caminho. Temos que criar um meio de recados e conversação 
+pela aplicação.***
+
+3 - Como é executado o levantado da taxa de empregabilidade no Senai atualmente???
+R:
+***Atualmente é executado por uma planilha excel sendo tudo manual o processo de achar os alunos que estão
+trabalhando e aqueles que já sairam. é um controle em campo, nada automatizado***
+
+4 - Quais partes do processo precisam ser automatizadas????
+R:
+***Disponibilidade de formularios, acessados direto na plataforma, avaliações periodicas após o terceiro 
+mês, sistema avisar o estagiario, empresa e o possarle pra fazer a avaliação, e o status do estagio do 
+aluno ou ex aluno.***
+
+5 - Como funciona o processo de "vivência profissional"???
+R:
+***é o mesmo núcleo que faz as avaliações terceiras como os EAD***
+É um curso do senai sp onde todos os alunos que começam o estagio precisam realizar esse curso ead 
+(80 hrs) quem controla o curso é o nucleo do senai sp, unica coisa q nós temos q fazer é alimentar o 
+sistema do senai.
+
+6 - A equipe de gestão pretende acompanhar todo o processo de contratação??? ou apenas partes chaves 
+do processo???
+R:
+***Ter os dados da empresa e dos alunos, facilitando a administração e mandar os recados***
+
+7 - Pergunta da Isa Como os ex-alunos do Senai vão fazer estágio se eles não estão mais reistrados em nenhum
+curso??
+R:
+***ex-alunos = Manter o alunos mesmo apóis o termino do curso continue na plataforma
+
+
+8- Como funciona o sistema de parceria do Senai com outras empresas
+
+
+
+
+
+
+
+
+

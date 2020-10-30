@@ -1,0 +1,22 @@
+As ideias do projeto que foram discutidas entre Lucas, Gus E Daniel(Consagrado) foram as seguintes:
+
+A aplicação irá conter 5 seções (número que pode aumentar com novas ideias), sendo a principal ideia 
+
+1 - ter uma página focada nas vagas cadastradas pelas empresas, onde o usuário irá poder visualizar e se canditar a vaga.
+
+2 - Ter uma página onde todods consigam visualizar todos os participantes e suas informações profissionais. (a mesma 
+coisa que a pagina de cima, mas focada nos usuarios que se inscreveram no site).
+
+3 - após se canditar a comunicação com a empresa será feita em outra região do site (um exemplo seria uma pagina social,
+onde os usuarios e as empresas poderiam fazer postagens profissionais e teriam um chat privado para conversar sobre a vaga).
+O próprio linkedin já faz isso, porém de uma forma muito estranha e desorganizada.
+
+4 - Ter uma página para os usuarios verificarem quais são os requisitos mais solicitados pelas empresas (Ex: Será uma
+página que irá exibir graficos mostrando que 50% das pessoas que foram contradas tinha o conhecimento em c#, sql e framework)
+algo relacionado a isso
+
+5 - Aqui seria a praticamente o mais importante do site. É a página responsavel por todos os dados das empresas e usuarios
+comuns. Seria os dados das vagas cadastradas, quem cadastrou essas vagas e quais usuarios se candidataram a vaga, tanto a
+empresa quanto o usuario vão ter se registrado e aqui nessa página irá ocorrer o alinhamento de dados, para que dessa forma 
+o senai consiga deixar tudo organizado de uma forma automatizada. Nessa página serão exibidos gráficos, que servirão como
+um acompanhamento do Senai para ter as informações de qual empresa mais contrata e quem foi contratado

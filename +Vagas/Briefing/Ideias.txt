@@ -1,0 +1,16 @@
+Na pagina de vagas deve haver um filtro Ex:(C#, Sqlserver, junior) muito parecido com o programathor.
+
+No cadastro a empresa irá informar os dados importantes como (nome, localização, area de atuação e etc). E no 
+cadastro da vaga a empresa tera que infrmar todos os dados importantes como (Tipo da contratação, salario,
+duração do estagio e etc). O mesmo vale para o candidato que irá criar sua conta com todos os seus dados importantes
+como(o curriculo, experiencias, etc).
+
+No proprio site já terá a documentação que a empresa precisa preencher. Pensamos em mandar esse doc automaticamente
+assim que a empresa marcasse o sinal de contrato em estagio final, mandando a doc automaticamnte para a
+empresa. Ou quando esse sinal fosse acionado uma mensagem para o adm aparecesse, avisando-o que a doc esta
+sendo requisitada.
+
+Criar para o adm um dashboard mostrando os alunos empregados, pendentes(que estão em negociação com a empresa e sem
+candidaturas), fazendo assim a gestão de taxa de empregabilidade do Senai.
+
+extras (citados no doc anterior)

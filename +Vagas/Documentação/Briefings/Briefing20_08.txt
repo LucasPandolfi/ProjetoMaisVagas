@@ -1,0 +1,6 @@
+mandar notificações sobre como esta indo o estágio do obtendo o feedback do "aluno, da empresa e do próprio senai(Possarle)"
+-analisar graficos dos estagios (evadido abandou estagio/Não concluido)
+-Nao necessario validar estagiario
+-authentic assine bem
+-enviar contrato pela aplicação
+-notificação da avalição do candidato feedback para 3 meses de contrato
