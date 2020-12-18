@@ -1,0 +1,12 @@
+As imagens que vocês verão a seguir, sairam diretamente da documentação do nosso projeto.
+Como Dito acima, utilizamos a metodologia ágil Scrum no desenvolvimento do projeto onde
+nós repartimos o tempo de desenvolvimento em 4 Sprints:
+
+A Primeira Sprint, que foi focada na criação da documentação e dos protótipos do projeto com base
+no que foi pedido pelo cliente.
+
+A segunda Sprint, que foi voltada para o desenvolvimento do Banco de dados e do back-End.
+
+A terceira Sprint, que foi voltada para o desenvolvimento da aplicação web.
+
+E a quarta e última Sprint, que foi voltada para o desenvolvimento da aplicação Mobile.

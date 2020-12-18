@@ -1,0 +1,41 @@
+ENTRADA
+-O objetivo desse projeto era desenvolver uma aplicação que automatizasse
+o processo de ofertar vagas disponibilizadas por empresas parceiras do
+senai para os alunos. Tudo isso em uma única plataforma de fácil acesso e 
+controle.
+
+Para o desenvolvimento da aplicação foram utilizados a metodologia SCRUM, tendo o 
+seu Banco de dados desenvolvido em SQL Server e o Back-End em c# com uso de 
+Frameworks, o Front-End foi desenvolvido por ReactJS e o Mobile em React Native.
+
+GERAL
+-Escopo:
+Foram desenvolvidos uma aplicação web e mobile em cima de uma 
+API para servir como provedor de dados em formato JSON para as aplicações.
+
+-Atores:
+Os atores do nosso sistema são as empresa, aluno e administradores, responsáveis 
+por executar certas funcionalidades em nossas aplicação e o próprio sistema
+em si que é o responsável por fazer tudo isso funcionar.
+
+-Requisitos:
+Aqui estão os nossos requisitos funcionais, sendo os principais
+cadastro, atualização e exclusão de usuários e vagas.
+
+-Requisitos não Funcionais:
+São requisitos focados no sistema, Usuabilidade da aplicação e softwares utilizados
+para o desenvolvimento da mesma.  
+
+-Regras de negócios:
+São as regras que a aplicação deve seguir
+
+-Diagrama de casos de uso:
+no diagrama de caso de uso temos os todos os atores da aplicação e suas respectivas 
+funcionalidades. demostrando o que cada usuário poderá efetuar dentro da aplicação.
+
+-Diagrama de classes:
+no diagrama de classes temos especificado de uma forma um pouco mais tecnica os metodos
+de cada usuario e suas ligações.
+
+
+
