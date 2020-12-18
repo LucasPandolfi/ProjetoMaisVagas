@@ -1,0 +1,55 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.texto>h3 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.caixa {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.caixa2 {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.caixapai {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.butao {
+    display: flex;
+    justify-content: center;
+    padding: 55px;
+}
+
+.caixa>input {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.imggus {
+    display: flex;
+    justify-content: center;
+}
+
+.voltar {
+    display: flex;
+    margin: 65px 100px 0px 100px;
+}
+
+.logosenai {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 70px 10px 0px;
+}

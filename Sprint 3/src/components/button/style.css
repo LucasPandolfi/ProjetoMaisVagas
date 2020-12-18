@@ -1,0 +1,21 @@
+.btnPadrao {
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    height: 50px;
+    background-color: #DA251C;
+    border-radius: 7px;
+    font-size: 20px;
+    color: white;
+    border-style: none;
+    border-color: none;
+    display: block;
+    border: none;
+}
+
+.btnPadrao:hover {
+    background-color: #f52b20;
+    border: none;
+    display: block;
+    border: none;
+}

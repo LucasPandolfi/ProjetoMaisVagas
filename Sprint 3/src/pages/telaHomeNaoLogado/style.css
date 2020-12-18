@@ -1,0 +1,58 @@
+                    .tudo .principaltelahomenaologado .inputmaior {
+                        display: flex;
+                        justify-content: space-around;
+                    }
+                    
+                    .tudo .principaltelahomenaologado .inputmenor {
+                        display: flex;
+                        justify-content: space-evenly;
+                    }
+                    
+                    .tudo {
+                        display: flex;
+                    }
+                    
+                    .cardstelahomenaologado {
+                        display: flex;
+                        justify-content: center;
+                    }
+                    
+                    .inputtelausuarionaologado {
+                        display: flex;
+                        justify-content: space-evenly;
+                        margin: 40px 0px 0px 0px;
+                    }
+                    
+                    .UsuarioNaoLogado {
+                        display: flex;
+                    }
+                    
+                    .telausuarionaologado {
+                        width: 100%;
+                    }
+                    
+                    .selectusuarionaologado {
+                        display: flex;
+                        justify-content: space-evenly;
+                        margin: 40px 0px 0px 0px;
+                    }
+                    
+                    .cardusuarionaologado {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                    }
+                    
+                    .cardssuperores {
+                        display: flex;
+                        justify-content: center;
+                        justify-content: space-evenly;
+                    }
+                    
+                    .cardsinferiores {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 60px;
+                        justify-content: space-evenly;
+                        margin-bottom: 50px;
+                    }

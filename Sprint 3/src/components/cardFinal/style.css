@@ -1,0 +1,36 @@
+.cardFinal12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 2px 2px 2px #4d4d4d21;
+    width: 420px;
+    height: 620px;
+    border-radius: 25px;
+    white-space: normal;
+}
+
+.cardFinal12:hover {
+    box-shadow: 0px 2px 2px 2px #4d4d4d21;
+}
+
+.cardFinal12>h3 {
+    color: #DA251C;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.cardFinal12>h4 {
+    color: #DA251C;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.cardFinal12>p {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    color: #535353;
+}

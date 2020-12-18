@@ -1,0 +1,18 @@
+.container_principal_2 {
+    padding: 1em; 
+    width: 100%;
+    background-color: #DA251C;
+}
+.principal_header  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoapp > .menu_Hamburguer{
+    padding-left: 200px;
+}
+
+.logoapp > .msg {
+    padding-left: 50px;
+}

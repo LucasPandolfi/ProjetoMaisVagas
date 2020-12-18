@@ -1,0 +1,37 @@
+.pai {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardnormal {
+    box-shadow: 0px 2px 2px 2px #4d4d4d21;
+    transition: 0.3s;
+    width: 370px;
+    height: 220px;
+    border-radius: 25px;
+    white-space: normal;
+}
+
+.cardnormal:hover {
+    box-shadow: 0px 2px 2px 2px #4d4d4d21;
+}
+
+.cardnormal>h4 {
+    color: #DA251C;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.cardnormal>p {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    color: #535353;
+}
+
+.cardnormal .btn_card {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}

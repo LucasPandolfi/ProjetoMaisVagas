@@ -1,0 +1,66 @@
+.menu_login{
+    display: flex;
+}
+
+.principal_login{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.body_login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    width: 100%;
+}
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    width: 100%;
+}
+
+.btn_login{
+    padding: 50px 0 0 0;
+}
+
+.nao_possui_cadastro > h3{
+    color: blue;
+    font-size: 15px;
+    padding: 40px;
+}
+
+.logo_login{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.body_login .logo_senai_login{
+
+    padding: 70px 0 0 400px;
+}
+
+.esquerda_vermelha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DA251C;
+    color: white;
+    width: 100%;
+    white-space: normal;
+}
+
+.esquerda_vermelha > h2{
+    font-size: 25px;
+    width: 670px;
+    height: 160px;
+}

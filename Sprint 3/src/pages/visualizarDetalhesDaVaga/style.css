@@ -1,0 +1,11 @@
+.card1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 160px;
+}
+
+.card>.btn_card {
+    margin: 50px;
+    margin-left: 220px;
+}

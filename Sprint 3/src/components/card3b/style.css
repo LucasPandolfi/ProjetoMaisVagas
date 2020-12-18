@@ -1,0 +1,47 @@
+.pai {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card3b {
+    box-shadow: 0px 2px 2px 2px #4d4d4d21;
+    transition: 0.3s;
+    width: 400px;
+    height: 250px;
+    border-radius: 25px;
+    white-space: normal;
+}
+
+.card3b:hover {
+    box-shadow: 0px 2px 2px 2px #4d4d4d21;
+}
+
+.card3b>h4 {
+    color: #DA251C;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.card3b>p {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    color: #535353;
+}
+
+.card3b .btn_card {
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+}
+
+.btn_card2 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button1 {
+    display: flex;
+    justify-content: center;
+}

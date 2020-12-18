@@ -1,0 +1,36 @@
+.card_btn {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 25px 25px 25px 25px;
+    width: 200px;
+    height: 180px;
+    background-color: #DA251C;
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+.card_btn:hover {
+    background-color: #f52b20;
+    border: none;
+}
+
+.card_btn img{
+    width: 80px;
+    height: 60px;
+}
+
+.btn_maior{
+    border-radius: 20px;
+    font-size: 17px;
+    text-decoration: none;
+    color: white;
+    border-style: none;
+    border: none;
+    white-space: normal;
+}
+
+A {text-decoration: none;} 
+
+

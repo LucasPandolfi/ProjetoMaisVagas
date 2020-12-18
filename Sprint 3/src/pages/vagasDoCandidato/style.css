@@ -1,0 +1,48 @@
+.UsuarioLogado {
+    display: flex;
+}
+
+.tela_principal_usuario_Naologado {
+    width: 100%;
+}
+
+.tela_principal_usuario_Naologado h2{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.select_usuario_logado {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0px 0px 0px;
+}
+
+.cardTodasVagas {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 80px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.CardVagas{
+    padding-bottom: 70px;
+}
+
+.filtro_Select{
+    width: 100%;
+}
+
+button{
+    box-shadow: 0px 2px 2px 2px #4d4d4d21;
+    transition: 0.3s;
+    width: 370px;
+    height: 220px;
+    border-radius: 25px;
+    white-space: normal;
+    border-style: none;
+    border: 0;
+    background-color: white;
+}
